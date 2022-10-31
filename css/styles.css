@@ -213,17 +213,12 @@ a{
 }
 
 #vision .booking h3{
-    color: var(--color-blanco);
     font-size: 15px;
     font-weight: 700;
     padding-left: 45px;
     padding-right: 45px;
     padding-top: 18px;
     padding-bottom: 13px;
-}
-
-#vision .booking a:hover{
-    color: var(--color2);
 }
 
 #empleados{
