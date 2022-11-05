@@ -343,16 +343,15 @@ a{
 }
 
 #about {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-#about .col-4{
-    display: block;
+#about .ratio{
+    margin: 10px auto;
+    display: inline-block;
     max-width: 500px;
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .contenedor{
