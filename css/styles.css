@@ -72,28 +72,6 @@ a{
     font-size: 20px;
 }
 
-.booking{
-    color: var(--color-blanco);
-    background-color: var(--color2);
-    margin-left: 20px;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
-}
-
-.booking:hover{
-    color: var(--color2);
-    background-color: var(--color-blanco);
-}
-
-.booking h3{
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 10px;
-}
-
 #slide{
     position: relative;
 }
@@ -128,11 +106,28 @@ a{
     color: var(--color-blanco);
     background-color: var(--color2);
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
 }
 
 #explore:hover{
     color: var(--color2);
+}
+
+#explore::after{
+    content: "";
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 0px;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    z-index: -2;
+}
+
+#explore:hover::after{
+    height: 100%;
     background-color: var(--color-blanco);
 }
 
@@ -329,17 +324,34 @@ a{
     font-family: 'DM Sans', sans-serif;
 }
 
-#meet .persona2{
+#meet .persona1{
     overflow: hidden;
 }
 
-#meet .persona2 img{
-    transition: all 0.5s ease-in-out;
+#meet .persona2{
+    position: relative;
+    transition: all 0.4s ease-in-out;
 }
 
-#meet .persona2 img:hover{
-    transform: scale(1.1); /* agranda la img al pasar el puntero */
-    filter: grayscale(38%);
+#meet .persona2:hover{
+    transform: scale(1.1);
+}
+
+#meet .persona2::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(13, 9, 37, 0.3);
+    opacity: 0%;
+    position: absolute;
+    visibility: visible;
+    transition: all 0.4s ease-in-out;
+}
+
+#meet .persona2:hover::after{
+    opacity: 100%;
 }
 
 #about {
@@ -386,4 +398,42 @@ a{
     al ancho de su caja contenedora */
     width: 100%;
     height: auto;
+}
+
+.booking{
+    color: var(--color-blanco);
+    background-color: var(--color2);
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.booking:hover{
+    color: var(--color2);
+}
+
+.booking::after{
+    content: "";
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 0px;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.booking:hover::after{
+    height: 100%;
+    background-color: var(--color-blanco);
+}
+
+.booking h3{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
 }
