@@ -98,10 +98,16 @@ a{
     position: relative;
 }
 
-#descripcion{
+#slide .contenedor2{
     position: absolute;
-    top: 39%;
-    left: 15%;
+    top: 35%;
+    left: 0;
+    right: 0;
+}
+
+#descripcion{
+    max-width: 780px;
+    margin: auto;
 }
 
 #descripcion h2{
@@ -110,19 +116,24 @@ a{
     font-weight: 700;
 }
 
-#slide .booking{
-    position: absolute;
-    top: 49%;
-    left: 44%;
-    margin-left: 0;
+#explore{
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    max-width: fit-content;
+    font-size: 18px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    padding: 15px 45px;
+    color: var(--color-blanco);
+    background-color: var(--color2);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
-#slide .booking h3{
-    font-size: 20px;
-    padding-left: 28px;
-    padding-right: 28px;
-    padding-top: 15px;
-    padding-bottom: 10px;
+#explore:hover{
+    color: var(--color2);
+    background-color: var(--color-blanco);
 }
 
 #mision{
@@ -242,7 +253,7 @@ a{
 }
 
 #empleados th{
-    color: var(--color4);
+    color: var(--color3);
     letter-spacing: 1px;
 }
 
@@ -288,14 +299,14 @@ a{
 }
 
 #meet .persona{
-    margin: 20px;
-    text-align: center;
-    background-color: var(--color2);
+    width: 500px;
+    margin: 0px 12px;
 }
 
 #meet .meet-descripcion{
-    margin-top: 50px;
-    padding: 20px;
+    padding: 45px 0px 15px;
+    text-align: center;
+    background-color: var(--color2);
 }
 
 #meet .meet-descripcion h2{
@@ -318,20 +329,17 @@ a{
     font-family: 'DM Sans', sans-serif;
 }
 
-#meet .persona{
+#meet .persona2{
     overflow: hidden;
-    width: 500px;
 }
 
-#meet .persona img{
-    transform: scale(1.1);
-    cursor: pointer;
+#meet .persona2 img{
     transition: all 0.5s ease-in-out;
 }
 
-#meet .persona img:hover{
-    transform: scale(1.2); /* agranda la img al pasar el puntero */
-    filter: grayscale(40%);
+#meet .persona2 img:hover{
+    transform: scale(1.1); /* agranda la img al pasar el puntero */
+    filter: grayscale(38%);
 }
 
 #about {
@@ -347,6 +355,19 @@ a{
     margin-right: auto;
 }
 
+.contenedor{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor2{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .menu-barra {
     display: flex;
     align-items: center;
@@ -359,4 +380,11 @@ a{
 .columna-50 {
     flex-basis: 50%;
     max-width: 50%;
+}
+
+.img-ajustar {
+    /* Se utiliza para ajustar el ancho de la imagen
+    al ancho de su caja contenedora */
+    width: 100%;
+    height: auto;
 }
